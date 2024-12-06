@@ -4,7 +4,8 @@ Adds support for the 2024 USB-C version of the Magic Trackpad 2. Upstream suppor
 
 This is not needed for older Apple Magic devices, which are supported in kernel version 5.15+.
 
-I have not tested or added support for the 2024 USB-C Magic Keyboard or Magic Mouse because I do not own them. PRs are welcome or you can send me some hardware!
+# Before you clone
+This repo builds on the work done by https://github.com/amiablechief/Magic-Trackpad-2024-USB-C-Linux.git. All I've done is pull in the relevant .h and .c files for my daily driver kernel (as of this writing) - ArchLinux Zen kernel (6.12.1-zen1-1-zen) - and compiled a working DKMS module for it. It works great on KDE Plasma 6.2.4.
 
 ## Install
 
@@ -13,9 +14,9 @@ I have not tested or added support for the 2024 USB-C Magic Keyboard or Magic Mo
 To install the driver on non-debian distros, install `dkms` and use the installer script:
 
 ```bash
-sudo apt install dkms # or yum, pacman, etc
-git clone https://github.com/mr-cal/Linux-Magic-Trackpad-2-USB-C-Driver.git
-cd Linux-Magic-Trackpad-2-USB-C-Driver
+pacman -Ss dkms # or paru, yay, yum, etc
+git clone https://github.com/amiablechief/Magic-Trackpad-2024-USB-C-Linux.git
+cd Magic-Trackpad-2024-USB-C-Linux
 chmod u+x install.sh
 sudo ./install.sh
 ```
@@ -69,7 +70,7 @@ The out-of-box experience with Magic Trackpads is significantly better with Wayl
 | -- | -- |
 | no driver | point, hard left click |
 | driver + X11 | point, hard left/right clicks, scroll, three-finger middle mouse button |
-| driver + wayland | point, hard/soft left/right clicks, smooth scroll, zoom, three-finger middle mouse button |
+| driver + wayland | point, hard/soft left/right clicks, smooth scroll, zoom, three-finger middle mouse button, four finger 'expose' |
 
 Additional gestures can be configured with [touchegg](https://github.com/JoseExposito/touchegg).
 
