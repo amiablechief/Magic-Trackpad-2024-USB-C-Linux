@@ -4,7 +4,8 @@ set -e
 set -x
 
 dkms_name="hid-magicmouse-dkms"
-dkms_version="6.11+magicmouse2"
+#dkms_version="6.11+magicmouse2"
+dkms_version="6.12.1-zen1-1-zen+magicmouse2"
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # add
