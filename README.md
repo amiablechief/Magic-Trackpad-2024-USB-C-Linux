@@ -1,3 +1,5 @@
+Note: This repository is archived since the driver is now part of the mainline Linux kernel
+
 # Linux Apple Magic Trackpad 2 USB-C Driver
 
 Adds support for the 2024 USB-C version of the Magic Trackpad 2. Upstream support in the kernel can be found [here](https://patchwork.kernel.org/project/linux-input/patch/20241110002816.6064-1-callahankovacs@gmail.com/).
